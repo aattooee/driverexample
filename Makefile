@@ -20,7 +20,8 @@ MODULE_NAME = example
 
 
 all: $(BUILD_DIR_MAKEFILE) $(PRODUCT_DIR)
-	$(MAKE) CROSS_COMPILE=$(CROSS_COMPILE) ARCH=$(ARCH) $(EXARGS) -C $(KDIR) M=$(BUILD_DIR)  src=$(PWD) modules
+
+	$(MAKE)  CROSS_COMPILE=$(CROSS_COMPILE) ARCH=$(ARCH) $(EXARGS) -C $(KDIR) M=$(BUILD_DIR)  src=$(PWD) modules
 	cp $(BUILD_DIR)/*.ko $(PRODUCT_DIR)
 
 clean:
